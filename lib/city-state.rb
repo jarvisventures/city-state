@@ -146,6 +146,27 @@ module CS
   end
 
   def self.states(country)
+    if country.to_s.downcase == 'pl'
+      h = {}
+      h['DS'] = "Dolnośląskie"
+      h['KP'] = "Kujawsko-Pomorskie"
+      h['LB'] = "Lubelskie"
+      h['LS'] = "Lubuskie"
+      h['LD'] = "Łódzkie"
+      h['MP'] = "Małopolskie"
+      h['MZ'] = "Mazowieckie"
+      h['OP'] = "Opolskie"
+      h['PK'] = "Podkarpackie"
+      h['PL'] = "Podlaskie"
+      h['PM'] = "Pomorskie"
+      h['SK'] = "Świętokrzyskie"
+      h['SL'] = "Śląskie"
+      h['WM'] = "Warmińsko-Mazurskie"
+      h['WP'] = "Wielkopolskie"
+      h['ZP'] = "Zachodniopomorskie"
+      return h
+    end
+    
     self.current_country = country # set as current_country
     country = self.current_country # normalized
 
